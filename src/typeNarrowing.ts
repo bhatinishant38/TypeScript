@@ -23,3 +23,20 @@ function orderChai(size : "small" | "medium" | "large" | number){
 
 }
 
+class kulhadChai{
+    serve(){
+        return `serving cutting chai`
+    }
+}
+
+class masalaChai{
+    serve(){
+        return `serving masala chai`
+    }
+}
+
+function serve(chai : kulhadChai | masalaChai){
+    if(chai instanceof kulhadChai){
+        return chai.serve()
+    }
+}
