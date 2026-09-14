@@ -11,3 +11,15 @@ function serverChai(chai ? :string){
     }
     return `serving default masala chai`
 }
+
+function orderChai(size : "small" | "medium" | "large" | number){
+    if(size === "small"){
+        return `small cutting chai...`
+    }
+    if(size === 'medium' || size === "large"){
+        return `make extra chai`
+    }
+    return `chai order ${size}`
+
+}
+
