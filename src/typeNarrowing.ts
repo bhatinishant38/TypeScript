@@ -4,3 +4,10 @@ function getChai(kind : string | number){
     }
     return ` Chai order : ${kind}`
 }
+
+function serverChai(chai ? :string){
+    if(chai){
+        return `serving ${chai}`
+    }
+    return `serving default masala chai`
+}
