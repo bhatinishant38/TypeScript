@@ -20,8 +20,8 @@ function orderChai(size : "small" | "medium" | "large" | number){
         return `make extra chai`
     }
     return `chai order ${size}`
-
 }
+
 
 class kulhadChai{
     serve(){
@@ -41,6 +41,7 @@ function serve(chai : kulhadChai | masalaChai){
     }
 }
 
+// custom types
 type ChaiOrder = {
     type : string
     sugar : number
@@ -59,4 +60,50 @@ function serveOrder(item:ChaiOrder | string){
     if(isChaiOrder(item)){
         return `serving ${item.type} chai with ${item.sugar} sugar`
     }
+    return ` Serving custom chai : ${item}`
 }
+
+
+/ types ke bhi types /
+
+type MasalaChai ={
+    type : "Masala"
+    spiceLevel : number
+}
+type GingerChai = {
+    type : "Ginger"
+    amount : number
+}
+type ElaichiChai = {
+    type : "elaichi"
+    aroma : number
+}
+
+type Chai = MasalaChai | GingerChai | ElaichiChai
+
+function MakeChai(order :Chai){
+    switch (order.type) {
+        case "Masala":
+            return `Masala Chai`       
+            break;
+        case "Ginger":
+            return `Ginger Chai`       
+            break;
+        case "elaichi":
+            return `Elaichi Chai`       
+            break;   
+
+    }
+}
+
+function brew(order : MasalaChai | GingerChai){
+    if('spicelevel' in order){
+        return ` Masala Chai`
+    }
+}
+
+
+// function isStringArray(arr :unknown): arr is string[]{
+//     //
+
+// } 
