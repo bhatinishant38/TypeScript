@@ -26,13 +26,13 @@
 //  value.toUpperCase()
 
  let newValue : unknown
- newValue : "chai"
- newValue : [1,2,4]
- newValue : 2.4
+ newValue = "chai"
+ newValue = [1,2,4]
+ newValue = 2.4
 
  if (typeof newValue === "string"){
     newValue.toUpperCase()  
-    
+    console.log('vvvvvvvvvvvv')
  }
 
  if(typeof newValue === "number"){
