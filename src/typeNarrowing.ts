@@ -40,3 +40,23 @@ function serve(chai : kulhadChai | masalaChai){
         return chai.serve()
     }
 }
+
+type ChaiOrder = {
+    type : string
+    sugar : number
+}
+
+function isChaiOrder(obj:any):obj is ChaiOrder{
+    return (
+        typeof obj === 'object'  &&
+         obj !== null &&
+         typeof obj.type === "string" &&
+         typeof obj.type === "number"
+    )
+}
+
+function serveOrder(item:ChaiOrder | string){
+    if(isChaiOrder(item)){
+        return `serving ${item.type} chai with ${item.sugar} sugar`
+    }
+}
