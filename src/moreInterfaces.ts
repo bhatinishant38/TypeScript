@@ -1,4 +1,5 @@
-// interface work as like a type 
+// interface work as like a type and they are templetes on which objects are made
+
 interface Chai {
     flavour : string,
     price : number,
