@@ -1,6 +1,6 @@
- import Card from "./components/card"
+import Card from "./components/Card"
+
 function App() {
-  
   return (
     <>
     <div>App</div>
