@@ -2,7 +2,9 @@ import Card from "./components/Card"
 import Counter from "./components/Counter"
 import ChaiList from "./components/ChaiList"
 import type { Chai } from "./types"
-import Form from "./components/form"
+import Form from "./components/Form"
+import Cards from "./components/Cards"
+
 
 const menu : Chai[] = [
   {id:1 ,name : "masala" ,price: 300},
@@ -28,6 +30,10 @@ function App() {
       <Form onSubmit={(order)=>{console.log(order.name , order.cups)}}></Form>
      </div>
 
+
+<div>
+      <Cards title="papa" footer='nishant'/>
+</div>
     </>
   )
 }

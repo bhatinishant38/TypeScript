@@ -15,7 +15,7 @@ const Form = ( {onSubmit}:formProps) => {
    }
   return (
     <div>
-        <form action="post" onSubmit={handleSubmit}>
+        <form action="" onSubmit={handleSubmit}>
 
             <label htmlFor=""> Chai Name</label>
             <input   value={name} onChange={(e :React.ChangeEvent<HTMLInputElement>)=> setName(e.target.value)} />
@@ -23,7 +23,9 @@ const Form = ( {onSubmit}:formProps) => {
             <label htmlFor=""> Cups</label>
             <input type="number"  value={cups} onChange={(e :React.ChangeEvent<HTMLInputElement>)=> setCups(Number(e.target.value) || 0)} />
 
-                <button>Submit</button>
+            <div>
+                <button type="submit">Place Order</button>
+            </div>
 
         </form>
     </div>
